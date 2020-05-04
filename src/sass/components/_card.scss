@@ -1,0 +1,36 @@
+@use "../abstract/mixins"as mixins;
+
+.card {
+    width: 30rem;
+    height: 40rem;
+    border: 1px solid gold;
+
+    &__image {
+        width: 100%;
+        height: 40%;
+        background-image: url(../assets/Blog-post/post-1.jpg);
+
+        &--1 {
+            background-image: url(../assets/Blog-post/post-1.jpg);
+        }
+
+        &--2 {
+            background-image: url(../assets/Blog-post/post-2.jpg);
+        }
+
+        &--3 {
+            background-image: url(../assets/Blog-post/post-3.jpg);
+        }
+    }
+
+    &__info {
+        height: 60%;
+        @include mixins.flex-centre-vertical();
+    }
+
+    &__text {
+        &--title {
+            font-family: "Abel", cursive;
+        }
+    }
+}

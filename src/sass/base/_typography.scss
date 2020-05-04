@@ -1,0 +1,35 @@
+@use "../abstract/variables";
+
+.picture-category {
+
+    &__category--title,
+    &__popular-post--title {
+        font-family: variables.$Lexend;
+        font-size: 2rem;
+    }
+
+    &__category {
+        &--list {
+            font-family: variables.$Abel;
+
+            li {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__caption {
+        &--title {
+            font-family: variables.$Anton;
+            font-size: 2.5rem;
+        }
+
+        &--paragraph {
+            font-size: 1.4rem;
+            font-family: variables.$Lexend;
+            color: variables.$text-grey-light
+        }
+    }
+
+    &__popular {}
+}

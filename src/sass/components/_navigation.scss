@@ -1,0 +1,74 @@
+@use "../abstract/variables";
+
+.navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #F0F0F0;
+    padding: 0 1.75rem;
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: variables.$text-grey-light;
+        font-family: variables.$Josefin;
+        letter-spacing: 1.5px;
+    }
+
+    &__list,
+    &__icons {
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__list {
+        font-family: "Abel", cursive;
+        font-size: 1.6rem;
+
+        &--item {
+            margin-right: 3.25rem;
+
+            a {
+
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: variables.$text-grey-light;
+                }
+
+                &:hover,
+                &:active {
+                    color: variables.$text-grey;
+                }
+
+            }
+        }
+    }
+
+    &__icons {
+        font-size: 1.6rem;
+
+        &--icon {
+            margin-right: 2rem;
+
+            a {
+
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: variables.$midnight;
+                }
+            }
+        }
+    }
+}
