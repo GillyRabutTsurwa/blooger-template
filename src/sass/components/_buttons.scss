@@ -1,38 +1,39 @@
 @use "../abstract/variables";
+@use "../abstract/mixins" as mixins;
 
 .button-primary {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
+	// cursor: pointer;
+	// border: none;
+	// outline: none;
+	// padding: 1.5rem 3.5rem;
+	// border-radius: 3rem;
+	// font-size: 1.5rem;
+	@include mixins.button-config(1.5rem, 3.5rem, 3rem);
+	font-size: 1.5rem;
 
-    padding: 1.5rem 3.5rem;
-    border-radius: 3rem;
-    background-image: variables.$sky;
+	background-image: variables.$sky;
 
-    -webkit-transition: -webkit-transform 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 
-    transition: -webkit-transform 0.5s ease;
-
-    transition: transform 0.5s ease;
-
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-
-    &:active {
-        -webkit-transform: translateY(0.5rem);
-        transform: translateY(0.5rem);
-    }
+	&:active {
+		-webkit-transform: translateY(0.5rem);
+		transform: translateY(0.5rem);
+	}
 }
 
 .button-secondary {
-    padding: 1rem 2.2rem;
-    background-image: variables.$sky;
-    border-radius: 0.5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
+	@include mixins.button-config(1rem, 2.2rem, 0.5rem);
+	background-image: variables.$sky;
+	// padding: 1rem 2.2rem;
+	// border-radius: 0.5rem;
+	// border: none;
+	// outline: none;
+	// cursor: pointer;
 
-    span {
-        padding-right: 0.15rem;
-    }
+	span {
+		padding-right: 0.15rem;
+	}
 }

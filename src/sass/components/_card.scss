@@ -1,36 +1,51 @@
-@use "../abstract/mixins"as mixins;
+@use "../abstract/variables";
+@use "../abstract/mixins" as mixins;
 
 .card {
-    width: 30rem;
-    height: 40rem;
-    border: 1px solid gold;
+	// width: 30rem;
+	height: 40rem;
+	border-radius: 1rem;
+	-webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	overflow: hidden;
 
-    &__image {
-        width: 100%;
-        height: 40%;
-        background-image: url(../assets/Blog-post/post-1.jpg);
+	&__image {
+		width: 100%;
+		height: 40%;
+		background-image: url(../assets/Blog-post/post-1.jpg);
 
-        &--1 {
-            background-image: url(../assets/Blog-post/post-1.jpg);
-        }
+		&--1 {
+			background-image: url(../assets/Blog-post/post-1.jpg);
+		}
 
-        &--2 {
-            background-image: url(../assets/Blog-post/post-2.jpg);
-        }
+		&--2 {
+			background-image: url(../assets/Blog-post/post-2.jpg);
+		}
 
-        &--3 {
-            background-image: url(../assets/Blog-post/post-3.jpg);
-        }
-    }
+		&--3 {
+			background-image: url(../assets/Blog-post/post-3.jpg);
+		}
+	}
 
-    &__info {
-        height: 60%;
-        @include mixins.flex-centre-vertical();
-    }
+	&__info {
+		height: 60%;
+		@include mixins.flex-centre-vertical();
+	}
 
-    &__text {
-        &--title {
-            font-family: "Abel", cursive;
-        }
-    }
+	&__text {
+		&--title {
+			font-family: variables.$Abel;
+			font-size: 3rem;
+			color: #333;
+		}
+		&--text {
+			font-family: variables.$Lexend;
+			font-weight: lighter;
+			margin-top: 1.5rem;
+			font-size: 1.5rem;
+			line-height: 1.5;
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
 }

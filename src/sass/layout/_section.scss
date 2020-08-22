@@ -2,17 +2,23 @@
 
 .cards {
 	margin-top: 8rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	// display: -webkit-box;
+	// display: -ms-flexbox;
+	// display: flex;
+	// -webkit-box-pack: justify;
+	// -ms-flex-pack: justify;
+	// justify-content: space-between;
+	// -ms-flex-wrap: wrap;
+	//     flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 3rem;
 }
 
 .picture-category {
-	margin-top: 3rem;
-
+	margin: 3rem 0;
+	border-bottom: 2px solid #333;
+	padding-bottom: 3rem;
 
 	display: grid;
 	grid-template-columns: 65% 32%;
@@ -38,7 +44,6 @@
 			height: 100%;
 		}
 	}
-
 
 	&__category {
 		display: -webkit-box;
@@ -120,5 +125,4 @@
 			font-size: 1.4rem;
 		}
 	}
-
 }

@@ -1,0 +1,18 @@
+@mixin fadeAnimation($name, $from, $to) {
+	@-webkit-keyframes #{$name} {
+		from {
+			opacity: $from;
+		}
+		to {
+			opacity: $to;
+		}
+	}
+	@keyframes #{$name} {
+		from {
+			opacity: $from;
+		}
+		to {
+			opacity: $to;
+		}
+	}
+}
